@@ -17,17 +17,4 @@ body {
   font-weight: 400;
 }
 
-@layer utilities {
-  .glass-effect {
-    background: rgba(255, 255, 255, 0.75);
-    backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-  }
-  
-  .shadow-glow {
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 
-                0 2px 4px -1px rgba(0, 0, 0, 0.06),
-                0 0 25px rgba(107, 114, 128, 0.15);
-  }
-}
 

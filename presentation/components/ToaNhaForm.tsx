@@ -76,24 +76,13 @@ const ToaNhaForm: React.FC<ToaNhaFormProps> = ({
   };
 
   return (
-    <div className="glass-effect rounded-2xl shadow-glow p-6 border border-white/20 h-full">
-      <div className="mb-5">
-        <h2 className="text-xl font-bold bg-gradient-to-r from-gray-700 via-gray-800 to-gray-900 bg-clip-text text-transparent mb-2">
-          {toaNha ? "Cập Nhật Tòa Nhà" : "Thêm Mới Tòa Nhà"}
-        </h2>
-        <p className="text-gray-600 text-xs font-medium">
-          {toaNha
-            ? "Chỉnh sửa thông tin tọa độ tòa nhà"
-            : "Nhập thông tin tọa độ cho tòa nhà mới"}
-        </p>
-      </div>
-
+    <div className="bg-white rounded-lg shadow p-6 border border-gray-200 h-full">
       <form onSubmit={handleSubmit} className="space-y-5">
         <div className="space-y-5">
           <div>
             <label
               htmlFor="toadoX"
-              className="block text-sm font-semibold text-gray-700 mb-2"
+              className="block text-sm text-gray-700 mb-2"
             >
               Tọa Độ X <span className="text-red-500">*</span>
             </label>
@@ -104,10 +93,10 @@ const ToaNhaForm: React.FC<ToaNhaFormProps> = ({
               name="toadoX"
               value={formData.toadoX}
               onChange={handleChange}
-              className={`w-full px-3 py-2.5 border-2 rounded-xl transition-all duration-200 focus:outline-none focus:ring-2 ${
+              className={`w-full px-3 py-2 border rounded focus:outline-none ${
                 errors.toadoX
-                  ? "border-red-400 focus:ring-red-400 focus:border-red-500"
-                  : "border-gray-300 focus:ring-gray-400 focus:border-gray-500"
+                  ? "border-red-400 focus:border-red-500"
+                  : "border-gray-300 focus:border-gray-500"
               }`}
               placeholder="Ví dụ: 10.5"
             />
@@ -121,7 +110,7 @@ const ToaNhaForm: React.FC<ToaNhaFormProps> = ({
           <div>
             <label
               htmlFor="toadoY"
-              className="block text-sm font-semibold text-gray-700 mb-2"
+              className="block text-sm text-gray-700 mb-2"
             >
               Tọa Độ Y <span className="text-red-500">*</span>
             </label>
@@ -132,10 +121,10 @@ const ToaNhaForm: React.FC<ToaNhaFormProps> = ({
               name="toadoY"
               value={formData.toadoY}
               onChange={handleChange}
-              className={`w-full px-3 py-2.5 border-2 rounded-xl transition-all duration-200 focus:outline-none focus:ring-2 ${
+              className={`w-full px-3 py-2 border rounded focus:outline-none ${
                 errors.toadoY
-                  ? "border-red-400 focus:ring-red-400 focus:border-red-500"
-                  : "border-gray-300 focus:ring-gray-400 focus:border-gray-500"
+                  ? "border-red-400 focus:border-red-500"
+                  : "border-gray-300 focus:border-gray-500"
               }`}
               placeholder="Ví dụ: 20.3"
             />
@@ -150,15 +139,15 @@ const ToaNhaForm: React.FC<ToaNhaFormProps> = ({
         <div className="flex space-x-3 pt-3">
           <button
             type="submit"
-            className="flex-1 bg-gradient-to-r from-gray-600 via-gray-700 to-gray-800 text-white py-2.5 px-4 rounded-xl hover:from-gray-700 hover:via-gray-800 hover:to-gray-900 transition-all duration-200 font-semibold shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 text-sm"
+            className="flex-1 bg-gray-700 text-white py-2 px-4 rounded hover:bg-gray-800"
           >
-            {toaNha ? "✓ Cập Nhật" : "+ Thêm Mới"}
+            {toaNha ? "Cập Nhật" : "Thêm Mới"}
           </button>
           {toaNha && onCancel && (
             <button
               type="button"
               onClick={onCancel}
-              className="flex-1 bg-gray-100 text-gray-700 py-2.5 px-4 rounded-xl hover:bg-gray-200 transition-all duration-200 font-semibold border-2 border-gray-200 text-sm"
+              className="flex-1 bg-gray-200 text-gray-700 py-2 px-4 rounded hover:bg-gray-300"
             >
               Hủy
             </button>

@@ -96,18 +96,13 @@ const ToaNhaPage: React.FC = () => {
     <div className="space-y-6">
       {message.text && (
         <div
-          className={`p-4 rounded-xl shadow-lg animate-slide-down ${
+          className={`p-4 rounded shadow ${
             message.type === "success"
-              ? "bg-gradient-to-r from-gray-100 to-gray-200 text-gray-800 border-l-4 border-gray-500"
-              : "bg-gradient-to-r from-gray-100 to-gray-200 text-gray-800 border-l-4 border-gray-600"
+              ? "bg-green-50 text-green-800 border border-green-200"
+              : "bg-red-50 text-red-800 border border-red-200"
           }`}
         >
-          <div className="flex items-center">
-            <span className="mr-2">
-              {message.type === "success" ? "✓" : "✕"}
-            </span>
-            {message.text}
-          </div>
+          {message.text}
         </div>
       )}
 
